@@ -216,6 +216,16 @@ export interface IMultiStackedBarChartStyles {
   placeHolderOnHover: IStyle;
 
   /**
+   * Class is applied when bar is in focus
+   */
+  focusIndicator: IStyle;
+
+  /**
+   * Class is applied when bar is out of focus
+   */
+  withoutFocusIndicator: IStyle;
+
+  /**
    * Style for the legends container
    */
   legendContainer: IStyle;

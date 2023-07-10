@@ -40,7 +40,7 @@ export interface IMultiStackedBarChartState {
   calloutLegend: string;
   emptyChart?: boolean;
   barIds: Array<Array<string>>;
-  currentFocusedBar: [number, number] | null;
+  currentFocusedBar: Array<Array<boolean>>;
 }
 
 export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarChartProps, IMultiStackedBarChartState> {
@@ -73,7 +73,9 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
       barIds: this.props.data?.map(singleChartData =>
         singleChartData.chartData ? singleChartData.chartData.map(() => getId()) : [],
       ) || [[]],
-      currentFocusedBar: null,
+      currentFocusedBar: this.props.data?.map(singleChartData =>
+        singleChartData.chartData ? singleChartData.chartData.map(() => false) : [],
+      ) || [[]],
     };
     this._onLeave = this._onLeave.bind(this);
     this._onBarLeave = this._onBarLeave.bind(this);
@@ -92,7 +94,6 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
   }
 
   public render(): JSX.Element {
-    console.log(this.state.currentFocusedBar);
     if (!this.state.emptyChart) {
       const { data, theme, culture } = this.props;
       this._adjustProps();
@@ -246,7 +247,9 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
       return (
         <g
           key={index}
-          className={point.placeHolder ? this._classNames.placeHolderOnHover : this._classNames.opacityChangeOnHover}
+          className={`${
+            point.placeHolder ? this._classNames.placeHolderOnHover : this._classNames.opacityChangeOnHover
+          } ${this._classNames.focusIndicator}`}
           ref={(e: SVGGElement) => {
             this._refCallback(e, point.legend!);
           }}
@@ -257,7 +260,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
           aria-label={this._getAriaLabel(point)}
           onMouseOver={point.placeHolder ? undefined : this._onBarHover.bind(this, pointData, color, point)}
           onMouseMove={point.placeHolder ? undefined : this._onBarHover.bind(this, pointData, color, point)}
-          onMouseLeave={point.placeHolder ? undefined : this._onBarLeave}
+          // onMouseLeave={point.placeHolder ? undefined : this._onBarLeave}
           onClick={href ? (point.placeHolder ? undefined : this._redirectToUrl.bind(this, href)) : point.onClick}
           id={this.state.barIds[barGroupIndex][index]}
         >
@@ -311,12 +314,10 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
       }
     }
 
-    if (this.state.currentFocusedBar && this.state.currentFocusedBar[0] === barGroupIndex) {
-      bars.push(
-        <use xlinkHref={`#${this.state.barIds[this.state.currentFocusedBar[0]][this.state.currentFocusedBar[1]]}`} />,
-      );
-    } else {
-      bars.push(<use xlinkHref="fjaklj" />);
+    const focusedBarIndex = this.state.currentFocusedBar[barGroupIndex].findIndex(val => val);
+
+    if (focusedBarIndex !== -1) {
+      bars.push(<use xlinkHref={`#${this.state.barIds[barGroupIndex][focusedBarIndex]}`} />);
     }
 
     const hideNumber = hideRatio === undefined ? false : hideRatio;
@@ -379,23 +380,25 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
   ): void {
     this.state.refArray.forEach((obj: IRefArrayData) => {
       if (obj.legendText === point.legend!) {
-        this.setState({
-          refSelected: obj.refElement,
-          /** Show the callout if highlighted bar is focused and Hide it if unhighlighted bar is focused */
-          isCalloutVisible: this.state.selectedLegend === '' || this.state.selectedLegend === point.legend!,
-          calloutLegend: point.legend!,
-          dataForHoverCard: pointData,
-          color: color,
-          xCalloutValue: point.xAxisCalloutData!,
-          yCalloutValue: point.yAxisCalloutData!,
-          dataPointCalloutProps: point,
-          callOutAccessibilityData: point.callOutAccessibilityData!,
-          currentFocusedBar:
-            this.state.currentFocusedBar &&
-            this.state.barIds[this.state.currentFocusedBar[0]][this.state.currentFocusedBar[1]] ===
-              this.state.barIds[barGroupIndex][index]
-              ? null
-              : [barGroupIndex, index],
+        this.setState(prevState => {
+          const newCurrentBarFocused = prevState.currentFocusedBar.map((row, rowIndex) => {
+            return row.map((col, colIndex) => rowIndex === barGroupIndex && colIndex === index);
+          });
+
+          return {
+            ...prevState,
+            refSelected: obj.refElement,
+            /** Show the callout if highlighted bar is focused and Hide it if unhighlighted bar is focused */
+            isCalloutVisible: this.state.selectedLegend === '' || this.state.selectedLegend === point.legend!,
+            calloutLegend: point.legend!,
+            dataForHoverCard: pointData,
+            color: color,
+            xCalloutValue: point.xAxisCalloutData!,
+            yCalloutValue: point.yAxisCalloutData!,
+            dataPointCalloutProps: point,
+            callOutAccessibilityData: point.callOutAccessibilityData!,
+            currentFocusedBar: newCurrentBarFocused,
+          };
         });
       }
     });

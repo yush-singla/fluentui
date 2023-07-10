@@ -49,14 +49,19 @@ export const getMultiStackedBarChartStyles = (props: IMultiStackedBarChartStyleP
     opacityChangeOnHover: {
       opacity: shouldHighlight ? '' : '0.1',
       cursor: href ? 'pointer' : 'default',
-      stroke: theme.palette.white,
+    },
+    focusIndicator: {
       strokeWidth: 2,
+      stroke: theme.palette.white,
       selectors: {
         '&:focus': {
           stroke: theme.palette.black,
-          strokeWidth: '2px',
         },
       },
+    },
+    withoutFocusIndicator: {
+      stroke: theme.palette.white,
+      strokeWidth: 2,
     },
     ratioNumerator: {
       fontSize: FontSizes.medium,
@@ -70,14 +75,6 @@ export const getMultiStackedBarChartStyles = (props: IMultiStackedBarChartStyleP
     placeHolderOnHover: {
       opacity: shouldHighlight ? '' : '0.1',
       cursor: 'default',
-      stroke: theme.palette.white,
-      strokeWidth: '2',
-      selectors: {
-        '&:focus': {
-          stroke: theme.palette.black,
-          strokeWidth: '2px',
-        },
-      },
     },
     legendContainer: {
       margin: '5px 0px 0px 4px',
