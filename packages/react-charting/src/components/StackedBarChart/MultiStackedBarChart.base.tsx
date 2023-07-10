@@ -39,6 +39,8 @@ export interface IMultiStackedBarChartState {
   callOutAccessibilityData?: IAccessibilityProps;
   calloutLegend: string;
   emptyChart?: boolean;
+  barIds: Array<Array<string>>;
+  currentFocusedBar: [number, number] | null;
 }
 
 export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarChartProps, IMultiStackedBarChartState> {
@@ -68,6 +70,10 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
       yCalloutValue: '',
       calloutLegend: '',
       emptyChart: false,
+      barIds: this.props.data?.map(singleChartData =>
+        singleChartData.chartData ? singleChartData.chartData.map(() => getId()) : [],
+      ) || [[]],
+      currentFocusedBar: null,
     };
     this._onLeave = this._onLeave.bind(this);
     this._onBarLeave = this._onBarLeave.bind(this);
@@ -86,6 +92,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
   }
 
   public render(): JSX.Element {
+    console.log(this.state.currentFocusedBar);
     if (!this.state.emptyChart) {
       const { data, theme, culture } = this.props;
       this._adjustProps();
@@ -111,6 +118,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
           palette,
           this.props.hideRatio![index],
           this.props.hideDenominator![index],
+          index,
           this.props.href,
         );
         return <div key={index}>{singleChartBars}</div>;
@@ -157,6 +165,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
     palette: IPalette,
     hideRatio: boolean,
     hideDenominator: boolean,
+    barGroupIndex: number,
     href?: string,
   ): JSX.Element {
     const { culture } = this.props;
@@ -242,7 +251,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
             this._refCallback(e, point.legend!);
           }}
           data-is-focusable={!this.props.hideTooltip}
-          onFocus={this._onBarFocus.bind(this, pointData, color, point)}
+          onFocus={this._onBarFocus.bind(this, pointData, color, point, barGroupIndex, index)}
           onBlur={this._onBarLeave}
           role="img"
           aria-label={this._getAriaLabel(point)}
@@ -250,6 +259,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
           onMouseMove={point.placeHolder ? undefined : this._onBarHover.bind(this, pointData, color, point)}
           onMouseLeave={point.placeHolder ? undefined : this._onBarLeave}
           onClick={href ? (point.placeHolder ? undefined : this._redirectToUrl.bind(this, href)) : point.onClick}
+          id={this.state.barIds[barGroupIndex][index]}
         >
           <rect
             key={index}
@@ -300,6 +310,15 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
         );
       }
     }
+
+    if (this.state.currentFocusedBar && this.state.currentFocusedBar[0] === barGroupIndex) {
+      bars.push(
+        <use xlinkHref={`#${this.state.barIds[this.state.currentFocusedBar[0]][this.state.currentFocusedBar[1]]}`} />,
+      );
+    } else {
+      bars.push(<use xlinkHref="fjaklj" />);
+    }
+
     const hideNumber = hideRatio === undefined ? false : hideRatio;
 
     // Hide right side text of chart title for absolute-scale variant
@@ -351,7 +370,13 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
     );
   }
 
-  private _onBarFocus(pointData: number, color: string, point: IChartDataPoint): void {
+  private _onBarFocus(
+    pointData: number,
+    color: string,
+    point: IChartDataPoint,
+    barGroupIndex: number,
+    index: number,
+  ): void {
     this.state.refArray.forEach((obj: IRefArrayData) => {
       if (obj.legendText === point.legend!) {
         this.setState({
@@ -365,6 +390,12 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
           yCalloutValue: point.yAxisCalloutData!,
           dataPointCalloutProps: point,
           callOutAccessibilityData: point.callOutAccessibilityData!,
+          currentFocusedBar:
+            this.state.currentFocusedBar &&
+            this.state.barIds[this.state.currentFocusedBar[0]][this.state.currentFocusedBar[1]] ===
+              this.state.barIds[barGroupIndex][index]
+              ? null
+              : [barGroupIndex, index],
         });
       }
     });
@@ -505,9 +536,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
     }
   }
 
-  private _onBarLeave(): void {
-    /**/
-  }
+  private _onBarLeave(): void {}
 
   private _handleChartMouseLeave = () => {
     this._calloutAnchorPoint = null;
