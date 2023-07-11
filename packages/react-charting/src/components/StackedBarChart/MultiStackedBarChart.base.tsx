@@ -244,18 +244,20 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
         hideLabels: this.props.hideLabels,
       });
 
+      const isBarFocused = this.state.currentFocusedBar && this.state.currentFocusedBar[barGroupIndex][index];
+
       return (
         <g
           key={index}
           className={`${
             point.placeHolder ? this._classNames.placeHolderOnHover : this._classNames.opacityChangeOnHover
-          } ${this._classNames.focusIndicator}`}
+          } ${isBarFocused ? this._classNames.focusIndicator : this._classNames.withoutFocusIndicator}`}
           ref={(e: SVGGElement) => {
             this._refCallback(e, point.legend!);
           }}
           data-is-focusable={!this.props.hideTooltip}
           onFocus={this._onBarFocus.bind(this, pointData, color, point, barGroupIndex, index)}
-          onBlur={this._onBarLeave}
+          onBlur={this._onBarLeave.bind(this, barGroupIndex, index)}
           role="img"
           aria-label={this._getAriaLabel(point)}
           onMouseOver={point.placeHolder ? undefined : this._onBarHover.bind(this, pointData, color, point)}
@@ -315,9 +317,10 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
     }
 
     const focusedBarIndex = this.state.currentFocusedBar[barGroupIndex].findIndex(val => val);
+    const xlinkHref = focusedBarIndex === -1 ? '' : this.state.barIds[barGroupIndex][focusedBarIndex];
 
     if (focusedBarIndex !== -1) {
-      bars.push(<use xlinkHref={`#${this.state.barIds[barGroupIndex][focusedBarIndex]}`} />);
+      bars.push(<use key={'stacking'} xlinkHref={`#${xlinkHref}`} data-is-focsusable={false} />);
     }
 
     const hideNumber = hideRatio === undefined ? false : hideRatio;
@@ -382,7 +385,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
       if (obj.legendText === point.legend!) {
         this.setState(prevState => {
           const newCurrentBarFocused = prevState.currentFocusedBar.map((row, rowIndex) => {
-            return row.map((col, colIndex) => rowIndex === barGroupIndex && colIndex === index);
+            return row.map((col, colIndex) => (rowIndex === barGroupIndex && colIndex === index ? true : col));
           });
 
           return {
@@ -539,7 +542,15 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
     }
   }
 
-  private _onBarLeave(): void {}
+  private _onBarLeave(barGroupIndex: number, index: number): void {
+    /**/
+    this.setState(prevState => ({
+      ...prevState,
+      currentFocusedBar: prevState.currentFocusedBar.map((row, rowIndex) =>
+        row.map((col, colIndex) => (rowIndex === barGroupIndex && colIndex === index ? false : col)),
+      ),
+    }));
+  }
 
   private _handleChartMouseLeave = () => {
     this._calloutAnchorPoint = null;

@@ -52,16 +52,13 @@ export const getMultiStackedBarChartStyles = (props: IMultiStackedBarChartStyleP
     },
     focusIndicator: {
       strokeWidth: 2,
-      stroke: theme.palette.white,
-      selectors: {
-        '&:focus': {
-          stroke: theme.palette.black,
-        },
-      },
+      stroke: theme.palette.black,
+      // outline: 'none',
     },
     withoutFocusIndicator: {
       stroke: theme.palette.white,
       strokeWidth: 2,
+      // outline: 'none',
     },
     ratioNumerator: {
       fontSize: FontSizes.medium,
