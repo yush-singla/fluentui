@@ -322,7 +322,16 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
     const xlinkHref = focusedBarIndex === -1 ? '' : this.state.barIds[barGroupIndex][focusedBarIndex];
 
     // use is used to stack the element on the top of the stack, inside the svg
-    bars.push(<use key={'stacking'} xlinkHref={`#${xlinkHref}`} stroke="red" tabIndex={-1} />);
+    bars.push(
+      <use
+        key={'stacking'}
+        xlinkHref={`#${xlinkHref}`}
+        stroke="red"
+        tabIndex={-1}
+        data-id-focusable={false}
+        aria-hidden={true}
+      />,
+    );
 
     const hideNumber = hideRatio === undefined ? false : hideRatio;
 
@@ -334,7 +343,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
 
     const getChartData = () => convertToLocaleString(data!.chartData![0].data ? data!.chartData![0].data : 0, culture);
     return (
-      <div className={this._classNames.singleChartRoot} role="application">
+      <div className={this._classNames.singleChartRoot}>
         <FocusZone direction={FocusZoneDirection.horizontal}>
           <div className={this._classNames.chartTitle}>
             {data!.chartTitle && (
