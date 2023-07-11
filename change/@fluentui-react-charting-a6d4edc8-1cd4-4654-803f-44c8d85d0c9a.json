@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "Fixed Focus indicator bug in multistacked bar chart",
+  "packageName": "@fluentui/react-charting",
+  "email": "email not defined",
+  "dependentChangeType": "patch"
+}

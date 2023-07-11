@@ -40,7 +40,10 @@ export interface IMultiStackedBarChartState {
   calloutLegend: string;
   emptyChart?: boolean;
   barIds: Array<Array<string>>;
-  currentFocusedBar: Array<Array<boolean>>;
+  /**
+   * Stores the state of each bar, whether it's focused or not
+   */
+  barFocusedState: Array<Array<boolean>>;
 }
 
 export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarChartProps, IMultiStackedBarChartState> {
@@ -73,7 +76,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
       barIds: this.props.data?.map(singleChartData =>
         singleChartData.chartData ? singleChartData.chartData.map(() => getId()) : [],
       ) || [[]],
-      currentFocusedBar: this.props.data?.map(singleChartData =>
+      barFocusedState: this.props.data?.map(singleChartData =>
         singleChartData.chartData ? singleChartData.chartData.map(() => false) : [],
       ) || [[]],
     };
@@ -244,25 +247,24 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
         hideLabels: this.props.hideLabels,
       });
 
-      const isBarFocused = this.state.currentFocusedBar && this.state.currentFocusedBar[barGroupIndex][index];
+      const isBarFocused = this.state.barFocusedState && this.state.barFocusedState[barGroupIndex][index];
 
       return (
         <g
           key={index}
           className={`${
             point.placeHolder ? this._classNames.placeHolderOnHover : this._classNames.opacityChangeOnHover
-          } ${isBarFocused ? this._classNames.focusIndicator : this._classNames.withoutFocusIndicator}`}
+          } ${isBarFocused ? this._classNames.withFocusIndicator : this._classNames.withoutFocusIndicator}`}
           ref={(e: SVGGElement) => {
             this._refCallback(e, point.legend!);
           }}
           data-is-focusable={!this.props.hideTooltip}
-          onFocus={this._onBarFocus.bind(this, pointData, color, point, barGroupIndex, index)}
-          onBlur={this._onBarLeave.bind(this, barGroupIndex, index)}
+          onFocus={e => this._onBarFocus(pointData, color, point, barGroupIndex, index)}
+          onBlur={e => this._onBarLeave(barGroupIndex, index)}
           role="img"
           aria-label={this._getAriaLabel(point)}
           onMouseOver={point.placeHolder ? undefined : this._onBarHover.bind(this, pointData, color, point)}
           onMouseMove={point.placeHolder ? undefined : this._onBarHover.bind(this, pointData, color, point)}
-          // onMouseLeave={point.placeHolder ? undefined : this._onBarLeave}
           onClick={href ? (point.placeHolder ? undefined : this._redirectToUrl.bind(this, href)) : point.onClick}
           id={this.state.barIds[barGroupIndex][index]}
         >
@@ -316,7 +318,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
       }
     }
 
-    const focusedBarIndex = this.state.currentFocusedBar[barGroupIndex].findIndex(val => val);
+    const focusedBarIndex = this.state.barFocusedState[barGroupIndex].findIndex(val => val);
     const xlinkHref = focusedBarIndex === -1 ? '' : this.state.barIds[barGroupIndex][focusedBarIndex];
 
     // use is used to stack the element on the top of the stack, inside the svg
@@ -383,7 +385,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
     this.state.refArray.forEach((obj: IRefArrayData) => {
       if (obj.legendText === point.legend!) {
         this.setState(prevState => {
-          const newCurrentBarFocused = prevState.currentFocusedBar.map((row, rowIndex) => {
+          const newCurrentBarFocused = prevState.barFocusedState.map((row, rowIndex) => {
             return row.map((col, colIndex) => (rowIndex === barGroupIndex && colIndex === index ? true : col));
           });
 
@@ -399,7 +401,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
             yCalloutValue: point.yAxisCalloutData!,
             dataPointCalloutProps: point,
             callOutAccessibilityData: point.callOutAccessibilityData!,
-            currentFocusedBar: newCurrentBarFocused,
+            barFocusedState: newCurrentBarFocused,
           };
         });
       }
@@ -545,7 +547,7 @@ export class MultiStackedBarChartBase extends React.Component<IMultiStackedBarCh
     /**/
     this.setState(prevState => ({
       ...prevState,
-      currentFocusedBar: prevState.currentFocusedBar.map((row, rowIndex) =>
+      barFocusedState: prevState.barFocusedState.map((row, rowIndex) =>
         row.map((col, colIndex) => (rowIndex === barGroupIndex && colIndex === index ? false : col)),
       ),
     }));

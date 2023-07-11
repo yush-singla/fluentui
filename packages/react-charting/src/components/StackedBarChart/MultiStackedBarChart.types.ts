@@ -218,7 +218,7 @@ export interface IMultiStackedBarChartStyles {
   /**
    * Class is applied when bar is in focus
    */
-  focusIndicator: IStyle;
+  withFocusIndicator: IStyle;
 
   /**
    * Class is applied when bar is out of focus

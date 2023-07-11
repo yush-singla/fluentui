@@ -28,6 +28,7 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -35,7 +36,7 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone1"
+        data-focuszone-id="FocusZone5"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -79,7 +80,7 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
             </span>
             <div
               hidden={true}
-              id="tooltip2"
+              id="tooltip6"
               style={
                 Object {
                   "border": 0,
@@ -130,7 +131,7 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone3"
+        data-focuszone-id="FocusZone7"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -160,18 +161,16 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__0"
               key="0"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -192,18 +191,16 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__1"
               key="1"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -217,6 +214,12 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
                 y={0}
               />
             </g>
+            <use
+              key="stacking"
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -234,6 +237,7 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -241,7 +245,7 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone4"
+        data-focuszone-id="FocusZone8"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -285,7 +289,7 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
             </span>
             <div
               hidden={true}
-              id="tooltip5"
+              id="tooltip9"
               style={
                 Object {
                   "border": 0,
@@ -336,7 +340,7 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone6"
+        data-focuszone-id="FocusZone10"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -366,18 +370,16 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__2"
               key="0"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -398,18 +400,16 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__3"
               key="1"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -423,6 +423,12 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
                 y={0}
               />
             </g>
+            <use
+              key="stacking"
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -476,7 +482,7 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
                   &:focus {
                     outline: none;
                   }
-              data-focuszone-id="FocusZone7"
+              data-focuszone-id="FocusZone11"
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDownCapture={[Function]}
@@ -533,7 +539,7 @@ exports[`MultiStackedBarChart - mouse events Should render callout correctly on 
           }
       data-is-focusable={false}
       hidden={false}
-      id="callout0"
+      id="callout4"
       style={
         Object {
           "filter": "opacity(0)",
@@ -692,6 +698,7 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -699,7 +706,7 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone1"
+        data-focuszone-id="FocusZone5"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -743,7 +750,7 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
             </span>
             <div
               hidden={true}
-              id="tooltip2"
+              id="tooltip6"
               style={
                 Object {
                   "border": 0,
@@ -794,7 +801,7 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone3"
+        data-focuszone-id="FocusZone7"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -824,18 +831,16 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__0"
               key="0"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -856,18 +861,16 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__1"
               key="1"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -881,6 +884,12 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
                 y={0}
               />
             </g>
+            <use
+              key="stacking"
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -898,6 +907,7 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -905,7 +915,7 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone4"
+        data-focuszone-id="FocusZone8"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -949,7 +959,7 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
             </span>
             <div
               hidden={true}
-              id="tooltip5"
+              id="tooltip9"
               style={
                 Object {
                   "border": 0,
@@ -1000,7 +1010,7 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone6"
+        data-focuszone-id="FocusZone10"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -1030,18 +1040,16 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__2"
               key="0"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -1062,18 +1070,16 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__3"
               key="1"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -1087,6 +1093,12 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
                 y={0}
               />
             </g>
+            <use
+              key="stacking"
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -1140,7 +1152,7 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
                   &:focus {
                     outline: none;
                   }
-              data-focuszone-id="FocusZone7"
+              data-focuszone-id="FocusZone11"
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDownCapture={[Function]}
@@ -1197,7 +1209,7 @@ exports[`MultiStackedBarChart - mouse events Should render customized callout on
           }
       data-is-focusable={false}
       hidden={false}
-      id="callout0"
+      id="callout4"
       style={
         Object {
           "filter": "opacity(0)",
@@ -1273,6 +1285,7 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
             margin-bottom: 16px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -1280,7 +1293,7 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone48"
+        data-focuszone-id="FocusZone76"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -1324,7 +1337,7 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
             </span>
             <div
               hidden={true}
-              id="tooltip49"
+              id="tooltip77"
               style={
                 Object {
                   "border": 0,
@@ -1349,7 +1362,7 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone50"
+        data-focuszone-id="FocusZone78"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -1379,17 +1392,15 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__71"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -1409,17 +1420,15 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__72"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -1432,6 +1441,11 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -1447,6 +1461,7 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
             margin-bottom: 16px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -1454,7 +1469,7 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone51"
+        data-focuszone-id="FocusZone79"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -1498,7 +1513,7 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
             </span>
             <div
               hidden={true}
-              id="tooltip52"
+              id="tooltip80"
               style={
                 Object {
                   "border": 0,
@@ -1523,7 +1538,7 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone53"
+        data-focuszone-id="FocusZone81"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -1553,17 +1568,15 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__73"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -1583,17 +1596,15 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__74"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -1606,6 +1617,11 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -1659,7 +1675,7 @@ exports[`MultiStackedBarChart snapShot testing Should not render bar labels in a
                   &:focus {
                     outline: none;
                   }
-              data-focuszone-id="FocusZone54"
+              data-focuszone-id="FocusZone82"
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDownCapture={[Function]}
@@ -1714,6 +1730,7 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
             margin-bottom: 16px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -1721,7 +1738,7 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone40"
+        data-focuszone-id="FocusZone64"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -1765,7 +1782,7 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
             </span>
             <div
               hidden={true}
-              id="tooltip41"
+              id="tooltip65"
               style={
                 Object {
                   "border": 0,
@@ -1790,7 +1807,7 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone42"
+        data-focuszone-id="FocusZone66"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -1820,17 +1837,15 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__59"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -1850,17 +1865,15 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__60"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -1890,6 +1903,11 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
             >
               63
             </text>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -1905,6 +1923,7 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
             margin-bottom: 16px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -1912,7 +1931,7 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone43"
+        data-focuszone-id="FocusZone67"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -1956,7 +1975,7 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
             </span>
             <div
               hidden={true}
-              id="tooltip44"
+              id="tooltip68"
               style={
                 Object {
                   "border": 0,
@@ -1981,7 +2000,7 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone45"
+        data-focuszone-id="FocusZone69"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -2011,17 +2030,15 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__61"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -2041,17 +2058,15 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__62"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -2081,6 +2096,11 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
             >
               63
             </text>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -2134,7 +2154,7 @@ exports[`MultiStackedBarChart snapShot testing Should render absolute-scale vari
                   &:focus {
                     outline: none;
                   }
-              data-focuszone-id="FocusZone46"
+              data-focuszone-id="FocusZone70"
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDownCapture={[Function]}
@@ -2189,6 +2209,7 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -2196,7 +2217,7 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone1"
+        data-focuszone-id="FocusZone5"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -2240,7 +2261,7 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
             </span>
             <div
               hidden={true}
-              id="tooltip2"
+              id="tooltip6"
               style={
                 Object {
                   "border": 0,
@@ -2291,7 +2312,7 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone3"
+        data-focuszone-id="FocusZone7"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -2321,17 +2342,15 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__0"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -2351,17 +2370,15 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__1"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -2374,6 +2391,11 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -2389,6 +2411,7 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -2396,7 +2419,7 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone4"
+        data-focuszone-id="FocusZone8"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -2440,7 +2463,7 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
             </span>
             <div
               hidden={true}
-              id="tooltip5"
+              id="tooltip9"
               style={
                 Object {
                   "border": 0,
@@ -2491,7 +2514,7 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone6"
+        data-focuszone-id="FocusZone10"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -2521,17 +2544,15 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__2"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -2551,17 +2572,15 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__3"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -2574,6 +2593,11 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -2627,7 +2651,7 @@ exports[`MultiStackedBarChart snapShot testing renders MultiStackedBarChart corr
                   &:focus {
                     outline: none;
                   }
-              data-focuszone-id="FocusZone7"
+              data-focuszone-id="FocusZone11"
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDownCapture={[Function]}
@@ -2682,6 +2706,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -2689,7 +2714,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone32"
+        data-focuszone-id="FocusZone52"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -2733,7 +2758,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
             </span>
             <div
               hidden={true}
-              id="tooltip33"
+              id="tooltip53"
               style={
                 Object {
                   "border": 0,
@@ -2774,7 +2799,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone34"
+        data-focuszone-id="FocusZone54"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -2804,17 +2829,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__47"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -2834,17 +2857,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__48"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -2857,6 +2878,11 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -2872,6 +2898,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -2879,7 +2906,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone35"
+        data-focuszone-id="FocusZone55"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -2923,7 +2950,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
             </span>
             <div
               hidden={true}
-              id="tooltip36"
+              id="tooltip56"
               style={
                 Object {
                   "border": 0,
@@ -2964,7 +2991,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone37"
+        data-focuszone-id="FocusZone57"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -2994,17 +3021,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__49"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -3024,17 +3049,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__50"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -3047,6 +3070,11 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -3100,7 +3128,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideDenominator correctly
                   &:focus {
                     outline: none;
                   }
-              data-focuszone-id="FocusZone38"
+              data-focuszone-id="FocusZone58"
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDownCapture={[Function]}
@@ -3155,6 +3183,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -3162,7 +3191,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone9"
+        data-focuszone-id="FocusZone17"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -3206,7 +3235,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
             </span>
             <div
               hidden={true}
-              id="tooltip10"
+              id="tooltip18"
               style={
                 Object {
                   "border": 0,
@@ -3257,7 +3286,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone11"
+        data-focuszone-id="FocusZone19"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -3287,17 +3316,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__12"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -3317,17 +3344,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__13"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -3340,6 +3365,11 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -3355,6 +3385,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -3362,7 +3393,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone12"
+        data-focuszone-id="FocusZone20"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -3406,7 +3437,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
             </span>
             <div
               hidden={true}
-              id="tooltip13"
+              id="tooltip21"
               style={
                 Object {
                   "border": 0,
@@ -3457,7 +3488,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone14"
+        data-focuszone-id="FocusZone22"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -3487,17 +3518,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__14"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -3517,17 +3546,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__15"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -3540,6 +3567,11 @@ exports[`MultiStackedBarChart snapShot testing renders hideLegend correctly 1`] 
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -3577,6 +3609,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -3584,7 +3617,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone24"
+        data-focuszone-id="FocusZone40"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -3628,7 +3661,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
             </span>
             <div
               hidden={true}
-              id="tooltip25"
+              id="tooltip41"
               style={
                 Object {
                   "border": 0,
@@ -3653,7 +3686,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone26"
+        data-focuszone-id="FocusZone42"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -3683,17 +3716,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__35"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -3713,17 +3744,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__36"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -3736,6 +3765,11 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -3751,6 +3785,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -3758,7 +3793,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone27"
+        data-focuszone-id="FocusZone43"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -3802,7 +3837,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
             </span>
             <div
               hidden={true}
-              id="tooltip28"
+              id="tooltip44"
               style={
                 Object {
                   "border": 0,
@@ -3853,7 +3888,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone29"
+        data-focuszone-id="FocusZone45"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -3883,17 +3918,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__37"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -3913,17 +3946,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={true}
+              id="id__38"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -3936,6 +3967,11 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -3989,7 +4025,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideRatio correctly 1`] =
                   &:focus {
                     outline: none;
                   }
-              data-focuszone-id="FocusZone30"
+              data-focuszone-id="FocusZone46"
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDownCapture={[Function]}
@@ -4225,6 +4261,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -4232,7 +4269,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone16"
+        data-focuszone-id="FocusZone28"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -4276,7 +4313,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
             </span>
             <div
               hidden={true}
-              id="tooltip17"
+              id="tooltip29"
               style={
                 Object {
                   "border": 0,
@@ -4327,7 +4364,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone18"
+        data-focuszone-id="FocusZone30"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -4357,17 +4394,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={false}
+              id="id__23"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -4387,17 +4422,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={false}
+              id="id__24"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -4410,6 +4443,11 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -4425,6 +4463,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
             margin-bottom: 10px;
             width: 100%;
           }
+      role="application"
     >
       <div
         className=
@@ -4432,7 +4471,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone19"
+        data-focuszone-id="FocusZone31"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -4476,7 +4515,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
             </span>
             <div
               hidden={true}
-              id="tooltip20"
+              id="tooltip32"
               style={
                 Object {
                   "border": 0,
@@ -4527,7 +4566,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
             &:focus {
               outline: none;
             }
-        data-focuszone-id="FocusZone21"
+        data-focuszone-id="FocusZone33"
         onFocus={[Function]}
         onKeyDown={[Function]}
         onMouseDownCapture={[Function]}
@@ -4557,17 +4596,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={false}
+              id="id__25"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -4587,17 +4624,15 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
                   {
                     cursor: default;
                     opacity: ;
+                  }
+                  {
                     stroke-width: 2px;
                     stroke: #ffffff;
                   }
-                  &:focus {
-                    stroke-width: 2px;
-                    stroke: #000000;
-                  }
               data-is-focusable={false}
+              id="id__26"
               onBlur={[Function]}
               onFocus={[Function]}
-              onMouseLeave={[Function]}
               onMouseMove={[Function]}
               onMouseOver={[Function]}
               role="img"
@@ -4610,6 +4645,11 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
                 y={0}
               />
             </g>
+            <use
+              stroke="red"
+              tabIndex={-1}
+              xlinkHref="#"
+            />
           </svg>
         </div>
       </div>
@@ -4663,7 +4703,7 @@ exports[`MultiStackedBarChart snapShot testing renders hideTooltip correctly 1`]
                   &:focus {
                     outline: none;
                   }
-              data-focuszone-id="FocusZone22"
+              data-focuszone-id="FocusZone34"
               onFocus={[Function]}
               onKeyDown={[Function]}
               onMouseDownCapture={[Function]}
