@@ -4,6 +4,7 @@ import { StoryWright, Steps } from 'storywright';
 import { TestWrapperDecorator } from '../../utilities/TestWrapperDecorator';
 import { AreaChart, ICustomizedCalloutData, ChartHoverCard } from '@fluentui/react-charting';
 import { DefaultPalette } from '@fluentui/react';
+import { diffFolders } from 'pixel-buffer-diff-folders';
 
 storiesOf('react-charting/AreaChart', module)
   .addDecorator((story, context) => TestWrapperDecorator(story, context))

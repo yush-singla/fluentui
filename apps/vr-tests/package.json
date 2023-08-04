@@ -12,6 +12,8 @@
     "start": "start-storybook -p 3000",
     "type-check": "tsc",
     "vr:build": "yarn build",
+    "build-charting": "build-storybook -c .charting --no-manager-cache -o dist/storybook",
+    "start-charting": "start-storybook -c .charting -p 3000",
     "vr:test": "storywright  --browsers chromium --url dist/storybook --destpath dist/screenshots --waitTimeScreenshot 500 --concurrency 4 --headless true"
   },
   "devDependencies": {

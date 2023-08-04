@@ -20654,6 +20654,15 @@ pirates@^4.0.1, pirates@^4.0.4, pirates@^4.0.5:
   resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.5.tgz#feec352ea5c3268fb23a37c702ab1699f35a5f3b"
   integrity sha512-8V9+HQPupnaXMA23c5hvl69zXvTwTzyAYasnkb0Tts4XvO4CliqONMOnvlq26rkhLC3nWDFBJf73LU1e1VZLaQ==
 
+pixel-buffer-diff-folders@1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/pixel-buffer-diff-folders/-/pixel-buffer-diff-folders-1.3.1.tgz#16049f7689d68b83f9c787d2dd82fbf3ee4f00c1"
+  integrity sha512-I4fZvvAzowxhETNRHWLWdjZxFo+Bl/Q/Ae3BkzAOv0ywMvz6b24bVtncRSCWSBYTpRhU3xaa/C9GtGTgkF0quA==
+  dependencies:
+    fast-png "^6.1.0"
+    jpeg-js "^0.4.4"
+    pixel-buffer-diff "1.3.3"
+
 pixel-buffer-diff-folders@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/pixel-buffer-diff-folders/-/pixel-buffer-diff-folders-1.3.0.tgz#89d1f1af84fb469311de6fc20bda807105280a62"
